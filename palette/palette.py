@@ -1,4 +1,4 @@
-from data.asset import Asset, asset_defaults
+from core.assets.asset import Asset, asset_defaults
 
 @asset_defaults(
     primary_wood = 'oak',

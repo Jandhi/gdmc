@@ -1,8 +1,8 @@
 from gdpc import Editor, WorldSlice, Block
 from gdpc.vector_tools import ivec3, ivec2
-from structures.legacy_directions import cardinal, get_ivec2, to_text
-from utils.bounds import is_in_bounds2d
-from maps.map import Map
+from core.structures.legacy_directions import cardinal, get_ivec2, to_text
+from core.utils.bounds import is_in_bounds2d
+from core.maps.map import Map
 
 def build_highway(points : list[ivec3], editor : Editor, world_slice: WorldSlice, map : Map):
     master_points       : set[ivec2] = set()

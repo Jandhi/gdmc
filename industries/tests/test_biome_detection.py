@@ -2,13 +2,11 @@ import sys
 sys.path[0] = sys.path[0].removesuffix('\\industries\\tests')
 
 from gdpc import Editor
-from gdpc.vector_tools import ivec2, ivec3
-from data.load_assets import load_assets
+from gdpc.vector_tools import ivec3
+from core.assets.load_assets import load_assets
 from districts.district import District
-from terrain.plateau import plateau
-from terrain.water_map import get_water_map
-from gdpc.world_slice import WorldSlice
-from industries import industry, biomes
+from industries import industry
+
 
 def detect_biome():
     load_assets('assets')

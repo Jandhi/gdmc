@@ -1,4 +1,4 @@
-from data.asset import Asset
+from core.assets.asset import Asset
 
 class PaintPalette(Asset):
     palette : dict

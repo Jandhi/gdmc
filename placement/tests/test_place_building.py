@@ -5,17 +5,11 @@ sys.path[0] = sys.path[0].removesuffix('\\placement\\tests')
 # Actual file
 from gdpc import Editor, Block
 from gdpc.vector_tools import ivec2, ivec3
-from districts.generate_districts import generate_districts
-from maps.water_map import get_water_map
-from districts.tests.draw_districts import draw_districts
-from placement.city_blocks import add_city_blocks
-from maps.map import Map
-from data.load_assets import load_assets
-from terrain.smooth_edges import smooth_edges
-from terrain.plateau import plateau
+from core.maps.map import Map
+from core.assets.load_assets import load_assets
 from placement.building_placement import place_building
-from structures.legacy_directions import x_plus, x_minus, z_plus, z_minus
-from noise.rng import RNG
+from core.structures.legacy_directions import z_plus
+from core.noise.rng import RNG
 
 
 SEED = 0x44444

@@ -1,6 +1,6 @@
-from heapq import heapify, heappop, heappush
+from heapq import heappop, heappush
 from gdpc import Editor, Block
-from utils.vectors import y_ivec3
+from core.utils.vectors import y_ivec3
 from paths.a_star import COUNTER_LIMIT, COUNTER_LIMIT_EXCEEDED
 
 # get_neighbours takes state

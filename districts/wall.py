@@ -1,14 +1,14 @@
-from noise.rng import RNG
-from noise.random import randrange
+from core.noise.rng import RNG
+from core.noise.random import randrange
 from gdpc import Editor, Block
-from gdpc.vector_tools import Rect, ivec2, distance, ivec3
+from gdpc.vector_tools import ivec2, ivec3
 from gdpc import WorldSlice
-from structures.legacy_directions import north, east, west, south, get_ivec2, directions, left, right, to_text, ivec2_to_dir, vector, cardinal, opposite, ivec3_to_dir
-from utils.geometry import get_neighbours_in_set, is_straight_ivec2, is_point_surrounded_dict, is_straight_not_diagonal_ivec2, get_outer_points
-from utils.misc import is_water
-from structures.nbt.build_nbt import build_nbt
-from structures.nbt.nbt_asset import NBTAsset
-from structures.transformation import Transformation
+from core.structures.legacy_directions import north, get_ivec2, right, to_text, ivec2_to_dir, vector, cardinal, opposite
+from core.utils.geometry import get_neighbours_in_set, is_straight_ivec2, is_point_surrounded_dict, get_outer_points
+from core.utils.misc import is_water
+from core.structures.nbt.build_nbt import build_nbt
+from core.structures.nbt.nbt_asset import NBTAsset
+from core.structures.transformation import Transformation
 from palette.palette import Palette
 from palette.palette_swap import fix_block_name
 from districts.gate import add_gates, Gate

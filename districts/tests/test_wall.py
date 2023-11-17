@@ -5,14 +5,12 @@ sys.path[0] = sys.path[0].removesuffix('\\districts\\tests')
 from gdpc import Editor, Block
 from gdpc.vector_tools import ivec2
 from districts.generate_districts import generate_districts
-from utils.geometry import get_outer_points
-from districts.wall import build_wall_palisade, order_wall_points, build_wall_standard, build_wall_standard_with_inner
-from maps.water_map import get_water_map
-from noise.rng import RNG
-from noise.random import choose_weighted
-from districts.tests.draw_districts import draw_districts
+from core.utils.geometry import get_outer_points
+from districts.wall import order_wall_points, build_wall_standard_with_inner
+from core.maps.water_map import get_water_map
+from core.noise.rng import RNG
 from palette.palette import Palette
-from data.load_assets import load_assets
+from core.assets.load_assets import load_assets
 
 SEED = 7
 

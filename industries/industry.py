@@ -2,9 +2,7 @@ import sys
 sys.path[0] = sys.path[0].removesuffix('\\industries')
 
 import random
-from data.asset import Asset, asset_defaults
-from gdpc.editor import Editor
-from districts.district import District
+from core.assets.asset import Asset, asset_defaults
 from industries import biomes
 
 class Industry(Asset):

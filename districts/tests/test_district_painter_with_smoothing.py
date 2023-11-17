@@ -2,18 +2,16 @@
 import sys
 sys.path[0] = sys.path[0].removesuffix('\\districts\\tests')
 
-from gdpc import Editor, Block
-from gdpc.vector_tools import ivec2, ivec3
+from gdpc import Editor
+from gdpc.vector_tools import ivec2
 from districts.generate_districts import generate_districts
 from terrain.smooth_edges import smooth_edges
-from maps.water_map import get_water_map
-from maps.build_map import get_build_map
+from core.maps.water_map import get_water_map
+from core.maps.build_map import get_build_map
 from terrain.plateau import plateau
-from noise.rng import RNG
-from noise.random import choose_weighted
-from districts.tests.draw_districts import draw_districts
+from core.noise.rng import RNG
 
-from districts.district_painter import replace_ground, plant_forest, replace_ground_smooth
+from districts.district_painter import plant_forest, replace_ground_smooth
 
 SEED = 2
 

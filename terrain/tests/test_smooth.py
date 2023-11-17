@@ -3,11 +3,11 @@ import sys
 sys.path[0] = sys.path[0].removesuffix('\\terrain\\tests')
 
 # Actual file
-from gdpc import Editor, Block
+from gdpc import Editor
 from gdpc.vector_tools import ivec3
 from districts.district import District
 from terrain.smooth import smooth
-from maps.water_map import get_water_map
+from core.maps.water_map import get_water_map
 
 SEED = 36322
 

@@ -1,20 +1,16 @@
 # Actual file
 from gdpc.editor import Editor, Block
-from structures.grid import Grid
-from buildings.walls.wall import Wall
+from core.structures.grid import Grid
 #from buildings.roofs.roof import Roof
 from buildings.rooms.room import Room
 
+from core.structures.legacy_directions import cardinal, vector as get_ivec3, right, up, north, east, south, west
 
-from data.load_assets import load_assets
-from structures.legacy_directions import cardinal, vector as get_ivec3, opposite, right, up, north, east, south, west
-
-from style.style import Style
 from palette.palette import Palette
-from noise.rng import RNG
+from core.noise.rng import RNG
 from gdpc.vector_tools import ivec3
 import numpy as np
-from buildings.cell import Cell
+from buildings.legacycell import LegacyCell
 
 ROOM_LIST = [
      'kitchen_no_window_small',
@@ -85,7 +81,7 @@ def is_corner(cell_to_check: ivec3, cells_to_fill: list) -> tuple:
     return test in corner_combinations, test
 
 
-def build_start(cells_with_rooms: list, cells_to_fill: list, rng : RNG, grid : Grid, editor : Editor, palette : Palette, cells : dict[ivec3, Cell]) -> list:
+def build_start(cells_with_rooms: list, cells_to_fill: list, rng : RNG, grid : Grid, editor : Editor, palette : Palette, cells : dict[ivec3, LegacyCell]) -> list:
     start_connections = []
     start = rng.choose(cells_to_fill)
     for direction in cardinal:
@@ -114,7 +110,7 @@ def build_start(cells_with_rooms: list, cells_to_fill: list, rng : RNG, grid : G
 
     return cells_with_rooms
 
-def build_staircase(level: int, cells_with_rooms: list, cells_to_fill: list, rng : RNG, grid : Grid, editor : Editor, palette : Palette, cells : dict[ivec3, Cell]) -> list:
+def build_staircase(level: int, cells_with_rooms: list, cells_to_fill: list, rng : RNG, grid : Grid, editor : Editor, palette : Palette, cells : dict[ivec3, LegacyCell]) -> list:
     possible_starts = []
     for potential_start in cells_to_fill:
         if is_corner(potential_start, cells_to_fill)[0] and potential_start + get_ivec3(up) in cells_to_fill and potential_start not in cells_with_rooms and list(potential_start)[1] == level:
@@ -160,7 +156,7 @@ def get_neighbors(rooms: list, inside_cells: list) -> set:
                 neighbors.add(new_cell)
     return neighbors
 
-def populate_floor(level: int, cells_with_rooms: list, cells_to_fill: list, rng : RNG, grid : Grid, editor : Editor, palette: Palette, cells : dict[ivec3, Cell]) -> list:
+def populate_floor(level: int, cells_with_rooms: list, cells_to_fill: list, rng : RNG, grid : Grid, editor : Editor, palette: Palette, cells : dict[ivec3, LegacyCell]) -> list:
     rooms_on_floor = [((x ,y, z), con) for (x, y, z), con in cells_with_rooms if y == level]
     cells_on_floor = [(x, y, z) for x, y, z in cells_to_fill if y == level]
     while len(rooms_on_floor) != len(cells_on_floor):
@@ -254,7 +250,7 @@ def populate_floor(level: int, cells_with_rooms: list, cells_to_fill: list, rng 
 
     return cells_with_rooms
 
-def build_one_by_one(num_levels: int, cells_to_fill: list, rng : RNG, grid : Grid, editor : Editor, palette : Palette, cells : dict[ivec3, Cell]) -> None:
+def build_one_by_one(num_levels: int, cells_to_fill: list, rng : RNG, grid : Grid, editor : Editor, palette : Palette, cells : dict[ivec3, LegacyCell]) -> None:
     if num_levels == 1:
         cell = cells_to_fill[0]
         pick = rng.choose(ONEBYONE_LIST)
@@ -273,7 +269,7 @@ def build_one_by_one(num_levels: int, cells_to_fill: list, rng : RNG, grid : Gri
 
 
 
-def furnish(cells_to_fill: list[ivec3], rng : RNG, grid : Grid, editor : Editor, palette : Palette, cells : dict[ivec3, Cell]) -> None:
+def furnish(cells_to_fill: list[ivec3], rng : RNG, grid : Grid, editor : Editor, palette : Palette, cells : dict[ivec3, LegacyCell]) -> None:
     number_of_floors = max([y for (x, y, z) in cells_to_fill]) + 1
     cells_with_rooms = []
 

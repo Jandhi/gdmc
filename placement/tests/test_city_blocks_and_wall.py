@@ -4,25 +4,24 @@ sys.path[0] = sys.path[0].removesuffix('\\placement\\tests')
 
 # Actual file
 from gdpc import Editor, Block
-from gdpc.vector_tools import ivec2, ivec3
+from gdpc.vector_tools import ivec2
 from districts.generate_districts import generate_districts
-from districts.tests.draw_districts import draw_districts
 from placement.city_blocks import add_city_blocks
-from utils.geometry import get_outer_points
-from maps.map import Map
-from data.load_assets import load_assets
+from core.utils.geometry import get_outer_points
+from core.maps.map import Map
+from core.assets.load_assets import load_assets
 from terrain.smooth_edges import smooth_edges
 from terrain.plateau import plateau
 from palette.palette import Palette
-from noise.rng import RNG
-from districts.wall import build_wall_palisade, order_wall_points, build_wall_standard, build_wall_standard_with_inner
-from maps.building_map import BUILDING, GATE
-from utils.bounds import area_2d
+from core.noise.rng import RNG
+from districts.wall import order_wall_points, build_wall_standard_with_inner
+from core.maps.building_map import BUILDING, GATE
+from core.utils.bounds import area_2d
 from paths.route_highway import route_highway, fill_out_highway
 from paths.build_highway import build_highway
-from gdpc.geometry import line3D, Box
-from utils.vectors import y_ivec3
-from structures.legacy_directions import get_ivec2
+from gdpc.geometry import line3D
+from core.utils.vectors import y_ivec3
+from core.structures.legacy_directions import get_ivec2
 
 SEED = 77273
 DO_TERRAFORMING = False

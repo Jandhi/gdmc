@@ -1,10 +1,6 @@
-from structures.nbt.nbt_asset import NBTAsset
-from gdpc.editor import Editor
-from structures.transformation import Transformation
-from structures.grid import Grid
-from structures.legacy_directions import right, left, opposites
+from core.structures.nbt.nbt_asset import NBTAsset
 from buildings.walls.wall import Wall
-from data.asset import default_subtype
+from core.assets.asset import default_subtype
 
 # NBT class for walls
 @default_subtype(Wall)

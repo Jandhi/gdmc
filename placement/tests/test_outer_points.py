@@ -4,11 +4,11 @@ sys.path[0] = sys.path[0].removesuffix('\\placement\\tests')
 
 # Actual file
 from gdpc import Editor, Block
-from gdpc.vector_tools import ivec2, ivec3
+from gdpc.vector_tools import ivec3
 from districts.generate_districts import generate_districts
-from maps.water_map import get_water_map
+from core.maps.water_map import get_water_map
 from districts.tests.draw_districts import draw_districts
-from sets.find_outer_points import find_outer_and_inner_points
+from core.utils.sets.find_outer_points import find_outer_and_inner_points
 
 SEED = 752
 

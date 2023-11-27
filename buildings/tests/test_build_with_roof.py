@@ -3,23 +3,19 @@ import sys
 sys.path[0] = sys.path[0].removesuffix('\\buildings\\tests')
 
 # Actual file
-from gdpc import Editor, Block, WorldSlice
-from gdpc.vector_tools import ivec3, ivec2
-from structures.grid import Grid
-from data.load_assets import load_assets
-from utils.vectors import x_ivec3, y_ivec3, z_ivec3
+from gdpc import Editor
+from gdpc.vector_tools import ivec3
+from core.structures.grid import Grid
+from core.assets.load_assets import load_assets
 from buildings.building_plan import BuildingPlan
-from buildings.cell import Cell
-from buildings.tests.frame import place_frame
 from buildings.walls.build_walls import build_walls
-from noise.rng import RNG
+from core.noise.rng import RNG
 from buildings.walls.wall import Wall
 from palette.palette import Palette
 from buildings.build_floor import build_floor
 from buildings.roofs.roof_component import RoofComponent
 from buildings.roofs.build_roof import build_roof
 from buildings.clear_interiors import clear_interiors
-from buildings.tests.random_shape import random_shape
 from buildings.rooms.furnish import furnish
 
 SEED = 654

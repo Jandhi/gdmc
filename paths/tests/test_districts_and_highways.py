@@ -3,18 +3,14 @@ import sys
 sys.path[0] = sys.path[0].removesuffix('\\paths\\tests')
 
 # Actual file
-from gdpc import Editor, Block
+from gdpc import Editor
 from gdpc.vector_tools import ivec2, ivec3
 from districts.generate_districts import generate_districts
-from maps.water_map import get_water_map
-from districts.tests.draw_districts import draw_districts
 from paths.route_highway import route_highway, fill_out_highway
 from paths.build_highway import build_highway
-from maps.building_map import get_building_map
 from terrain.plateau import plateau
 from terrain.smooth_edges import smooth_edges
-from maps.map import Map
-from utils.vectors import y_ivec3
+from core.maps.map import Map
 
 SEED = 243
 

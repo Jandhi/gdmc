@@ -4,9 +4,8 @@ sys.path[0] = sys.path[0].removesuffix('\\districts\\tests')
 
 # Actual file
 from gdpc import Editor, Block
-from gdpc.vector_tools import ivec2, ivec3
 from districts.generate_districts import generate_districts
-from maps.water_map import get_water_map
+from core.maps.water_map import get_water_map
 from districts.tests.draw_districts import draw_districts
 
 SEED = 752

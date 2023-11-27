@@ -1,7 +1,8 @@
 from buildings.building_plan import BuildingPlan
-from structures.legacy_directions import cardinal
-from buildings.cell import Cell
-from buildings.roofs.roof_component import SIDE, CORNER, INNER
+from core.structures.legacy_directions import cardinal
+from buildings.legacycell import LegacyCell
+from buildings.roofs.roof_component import CORNER
+
 
 def plan_roof(plan : BuildingPlan):
     plan.shape.sort(key = lambda point : point[1])
@@ -9,7 +10,7 @@ def plan_roof(plan : BuildingPlan):
     for pt in plan.shape:
         plan_roof_at_cell(plan, plan.cell_map[pt])
 
-def plan_roof_at_cell(plan : BuildingPlan, cell : Cell):
+def plan_roof_at_cell(plan : BuildingPlan, cell : LegacyCell):
     up, right, down, left = (cell.has_neighbour(direction) for direction in cardinal)
 
     # SINGLE

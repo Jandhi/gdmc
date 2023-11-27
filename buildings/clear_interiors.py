@@ -1,8 +1,8 @@
 from gdpc import Block, Editor
 from buildings.building_plan import BuildingPlan
-from structures.grid import Grid
+from core.structures.grid import Grid
 from gdpc.vector_tools import ivec3
-from structures.legacy_directions import x_plus, x_minus, z_minus, z_plus
+from core.structures.legacy_directions import x_plus, x_minus, z_minus, z_plus
 
 def clear_interiors(plan : BuildingPlan, editor : Editor):
     grid : Grid = plan.grid

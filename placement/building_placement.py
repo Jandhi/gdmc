@@ -1,9 +1,9 @@
 from gdpc.vector_tools import ivec2, ivec3, vec2
-from maps.map import Map
-from structures.legacy_directions import z_minus, z_plus, x_minus, x_plus, cardinal, get_ivec2
-from structures.grid import Grid
+from core.maps.map import Map
+from core.structures.legacy_directions import z_minus, z_plus, x_minus, x_plus, cardinal, get_ivec2
+from core.structures.grid import Grid
 from buildings.building_shape import BuildingShape
-from maps.building_map import CITY_WALL, BUILDING, CITY_ROAD
+from core.maps.building_map import CITY_WALL, CITY_ROAD
 from palette.palette import Palette
 from buildings.building_plan import BuildingPlan
 from gdpc import Editor, Block
@@ -13,8 +13,7 @@ from buildings.roofs.build_roof import build_roof
 from buildings.walls.wall import Wall
 from buildings.walls.build_walls import build_walls
 from buildings.clear_interiors import clear_interiors
-from noise.rng import RNG
-from utils.vectors import y_ivec3
+from core.noise.rng import RNG
 from palette.palette_swap import fix_block_name
 from buildings.rooms.furnish import furnish
 

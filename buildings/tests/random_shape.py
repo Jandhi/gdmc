@@ -1,5 +1,5 @@
 from gdpc.vector_tools import ivec2, ivec3
-from noise.rng import RNG
+from core.noise.rng import RNG
 
 def random_shape(SEED : int):
     # RANDOM

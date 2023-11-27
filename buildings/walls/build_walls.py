@@ -1,11 +1,10 @@
 from buildings.building_plan import BuildingPlan
-from buildings.cell import Cell
-from structures.legacy_directions import cardinal, vector, Direction, up
+from buildings.legacycell import LegacyCell
+from core.structures.legacy_directions import cardinal, Direction, up
 from gdpc.editor import Editor
-from dataclasses import dataclass
 from buildings.walls.wall import Wall, LOWER, UPPER
-from noise.rng import RNG
-from structures.grid import Grid
+from core.noise.rng import RNG
+from core.structures.grid import Grid
 
 NOT_ROOF = 'not_roof'
 ONLY_ROOF = 'only_roof'
@@ -16,7 +15,7 @@ def build_walls(plan : BuildingPlan, editor : Editor, walls : list[Wall], rng : 
             if not cell.has_neighbour(direction):
                 build_wall(cell, direction, editor, walls, rng)
 
-def build_wall(cell : Cell, direction : Direction, editor : Editor, walls : list[Wall], rng : RNG):
+def build_wall(cell : LegacyCell, direction : Direction, editor : Editor, walls : list[Wall], rng : RNG):
     has_door = cell.has_door(direction)
 
     def wall_is_eligible(wall : Wall):

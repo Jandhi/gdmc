@@ -1,8 +1,8 @@
-from data.asset import Asset, asset_defaults
+from core.assets.asset import Asset, asset_defaults
 from gdpc.vector_tools import ivec3, ivec2
-from structures.grid import Grid
+from core.structures.grid import Grid
 from collections.abc import Iterator
-from structures.legacy_directions import z_minus, x_z_flip as x_z_flip_dict, x_mirror as x_mirror_dict, z_mirror as z_mirror_dict
+from core.structures.legacy_directions import z_minus, x_z_flip as x_z_flip_dict, x_mirror as x_mirror_dict, z_mirror as z_mirror_dict
 
 @asset_defaults(door_direction=z_minus)
 class BuildingShape(Asset):

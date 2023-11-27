@@ -5,14 +5,12 @@ sys.path[0] = sys.path[0].removesuffix('\\districts\\tests')
 from gdpc import Editor, Block
 from gdpc.vector_tools import ivec2
 from districts.generate_districts import generate_districts
-from utils.geometry import get_outer_points
-from districts.wall import build_wall_palisade, order_wall_points, build_wall_standard, build_wall_standard_with_inner
-from maps.water_map import get_water_map
-from noise.rng import RNG
-from noise.random import choose_weighted
-from districts.tests.draw_districts import draw_districts
+from core.utils.geometry import get_outer_points
+from districts.wall import order_wall_points, build_wall_standard_with_inner
+from core.maps.water_map import get_water_map
+from core.noise.rng import RNG
 from palette.palette import Palette
-from data.load_assets import load_assets
+from core.assets.load_assets import load_assets
 
 SEED = 7
 
@@ -76,7 +74,7 @@ wall_points_list = order_wall_points(wall_points, wall_dict)
 rng = RNG(SEED)
 palette = Palette.find('japanese_dark_blackstone')
 
-#uncomment one of these to test one of the three wall types
+#uncomment one of these to tests one of the three wall types
 
 for wall_points in wall_points_list:
     build_wall_standard_with_inner(wall_points, wall_dict, inner_points, editor, world_slice, water_map, rng, palette)

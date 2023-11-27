@@ -1,6 +1,6 @@
-from data.asset import Asset, asset_defaults
+from core.assets.asset import Asset, asset_defaults
 from gdpc.editor import Editor
-from structures.grid import Grid
+from core.structures.grid import Grid
 from gdpc.vector_tools import ivec3
 
 # WALL POSITIONS

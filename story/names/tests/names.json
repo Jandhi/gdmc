@@ -1,0 +1,38 @@
+{
+  "name" : "names",
+  "type": "naming_schema",
+  "rules" : {
+    "name" : {
+      "<male_name,+male><%25,' ',#titles:title>" : 1,
+      "<female_name,+female> <%25,' ',#titles:title>" : 1
+    },
+    "j_prefix" : "<?j_prefix:'j'|''>",
+    "v_prefix" : "<?v_prefix:'v'|''>",
+    "male_name" : "<prefix><male_suffix>",
+    "female_name" : "<prefix><female_suffix>",
+    "prefix" : [
+      "ast",
+      "bjorn",
+      "bjor",
+      "bryn<+j_prefix>",
+      "hag",
+      "gun",
+      "sig",
+      "skjor",
+      "thorn"
+    ],
+    "male_suffix" : [
+      "dal",
+      "<j_prefix>urr",
+      "<j_prefix>ulf",
+      "mund"
+    ],
+    "female_suffix" : [
+      "<j_prefix>a",
+      "hild",
+      "rid",
+      "run",
+      "vi"
+    ]
+  }
+}

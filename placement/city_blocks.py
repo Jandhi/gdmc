@@ -1,17 +1,15 @@
 from districts.district import District
-from gdpc import Editor, Block, WorldSlice
+from gdpc import Editor, Block
 from gdpc.vector_tools import ivec2, ivec3, distance2
-from sets.set_operations import split, calculate_stretch, find_edges, find_outer_direction
-from sets.find_outer_points import find_outer_and_inner_points
-from noise.rng import RNG
-from structures.legacy_directions import cardinal, get_ivec2, to_text
-from utils.bounds import is_in_bounds2d
-from utils.vectors import point_3d, y_ivec3
-from maps.map import Map
-from maps.building_map import CITY_WALL, CITY_ROAD
+from core.utils.sets.set_operations import calculate_stretch, find_edges, find_outer_direction
+from core.utils.sets.find_outer_points import find_outer_and_inner_points
+from core.noise.rng import RNG
+from core.structures.legacy_directions import cardinal, get_ivec2, to_text
+from core.utils.bounds import is_in_bounds2d
+from core.utils.vectors import point_3d, y_ivec3
+from core.maps.map import Map
+from core.maps.building_map import CITY_WALL, CITY_ROAD
 from placement.building_placement import place_building
-from districts.tests.place_colors import colors
-from palette.palette import Palette
 
 MAXIMUM_SIZE = 2000
 

@@ -5,7 +5,7 @@ sys.path[0] = sys.path[0].removesuffix('\\placement\\tests')
 # Actual file
 from gdpc import Editor, Block
 from gdpc.vector_tools import ivec2, ivec3
-from sets.set_operations import split
+from core.utils.sets.set_operations import split
 
 editor = Editor(buffering=True, caching=True)
 

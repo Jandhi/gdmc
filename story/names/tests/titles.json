@@ -1,0 +1,10 @@
+{
+  "name" : "titles",
+  "type": "naming_schema",
+  "rules" : {
+    "title" : {
+      "the shieldmaiden" : "<?female:'1'|'0'>",
+      "the shieldbrother" : "<?male:'1'|'0'>"
+    }
+  }
+}

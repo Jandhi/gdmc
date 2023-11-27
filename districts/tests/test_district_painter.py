@@ -3,15 +3,14 @@ import sys
 sys.path[0] = sys.path[0].removesuffix('\\districts\\tests')
 
 from gdpc import Editor, Block
-from gdpc.vector_tools import ivec2, ivec3
+from gdpc.vector_tools import ivec2
 from districts.generate_districts import generate_districts
-from maps.water_map import get_water_map
-from maps.build_map import get_build_map
-from noise.rng import RNG
-from noise.random import choose_weighted
-from districts.tests.draw_districts import draw_districts
-from districts.district_painter import replace_ground, plant_forest, replace_ground_smooth
-from data.load_assets import load_assets
+from core.maps.water_map import get_water_map
+from core.maps.build_map import get_build_map
+from core.noise.rng import RNG
+from core.noise.random import choose_weighted
+from districts.district_painter import plant_forest
+from core.assets.load_assets import load_assets
 from districts.paint_palette import PaintPalette
 from terrain.forest import Forest
 
@@ -102,7 +101,7 @@ test : PaintPalette = PaintPalette.find('farmland')
 test2 : PaintPalette = PaintPalette.find('carrot')
 forest : Forest = Forest.find('mixed_forest')
 #replace_ground(all_points, test_blocks2, rng, water_map, build_map, editor, world_slice)
-#replace_ground(all_points, test.palette, rng, water_map, build_map, editor, world_slice, 0, ignore_blocks)
+#replace_ground(all_points, tests.palette, rng, water_map, build_map, editor, world_slice, 0, ignore_blocks)
 #replace_ground(all_points, test2.palette, rng, water_map, build_map, editor, world_slice, 1, ignore_blocks)
 #replace_ground(urban_points, urban_road, rng, water_map, build_map, editor, world_slice)
 #replace_ground_smooth(urban_points, urban, rng, water_map, build_map, editor, world_slice)

@@ -1,9 +1,0 @@
-{
-    "name" : "bedroom_corner",
-    "filepath" : "assets/rooms/bedroom/bedroom_corner.nbt",
-    "type" : "room",
-    "origin" : [-1, 0, -1],
-    "do_not_place" : "glass",
-    "facing" : "z_minus",
-    "connections" : ["wall", "wall", "open", "open"]
-}

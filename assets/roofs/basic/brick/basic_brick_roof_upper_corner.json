@@ -1,8 +1,0 @@
-{
-    "name" : "basic_brick_roof_upper_corner",
-    "type" : "roof_component",
-    "filepath" : "assets/roofs/basic/basic_brick_roof_upper_corner.nbt",
-    "origin" : [0, 0, 0],
-    "shape" : "upper_corner",
-    "palette" : "default_palette"
-}

@@ -1,0 +1,2 @@
+14:18:33 - [DEBUG] Debug
+14:18:33 - [ERROR] Error

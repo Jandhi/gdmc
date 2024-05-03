@@ -1,0 +1,11 @@
+{
+    "name" : "dwarven_wall_base_1_door",
+    "type" : "wall",
+    "filepath" : "grimoire/asset_data/walls/dwarven/dwarven_wall_base_1_door.nbt",
+    "origin" : [1, 0, 0],
+    "facing" : "x_minus",
+    "positions" : ["lower"],
+    "do_not_place" : ["minecraft:air"],
+    "has_door" : true,
+    "tags" : ["dwarven","dwarven_1"]
+}

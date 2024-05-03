@@ -1,0 +1,7 @@
+{
+    "name" : "basic_tower",
+    "type" : "tower",
+    "filepath" : "grimoire/asset_data/city_wall/towers/basic_tower.nbt",
+    "origin" : [3, 1, 3],
+    "palette" : "wall_palette"
+}

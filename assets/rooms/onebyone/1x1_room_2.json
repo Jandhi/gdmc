@@ -1,9 +1,0 @@
-{
-    "name" : "1x1_room_2",
-    "filepath" : "assets/rooms/onebyone/1x1_room_2.nbt",
-    "type" : "room",
-    "origin" : [-1, 0, -1],
-    "do_not_place" : "glass",
-    "facing" : "x_plus", 
-    "connections" : ["wall", "wall", "wall", "wall"]
-}

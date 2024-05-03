@@ -1,0 +1,9 @@
+{
+    "name" : "japanese_roof_flat_brick_inner_corner",
+    "type" : "roof_component",
+    "filepath" : "grimoire/asset_data/roofs/japanese/japanese_roof_flat_brick_inner_corner.nbt",
+    "origin" : [0, -1, 0],
+    "shape" : "inner",
+    "palette" : "japanese_dark_blackstone",
+    "tags" : ["japanese"]
+}

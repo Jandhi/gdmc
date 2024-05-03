@@ -1,9 +1,0 @@
-{
-    "name" : "storage_room",
-    "filepath" : "assets/rooms/misc/storage_room.nbt",
-    "type" : "room",
-    "origin" : [0, 0, -1],
-    "do_not_place" : "glass",
-    "facing" : "x_plus",
-    "connections" : ["wall", "wall", "open", "wall"]
-}

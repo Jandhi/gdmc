@@ -1,0 +1,9 @@
+{
+    "name" : "1x1_twostorey_upper_1",
+    "filepath" : "grimoire/asset_data/rooms/onebyone/1x1_twostorey_upper_1.nbt",
+    "type" : "room",
+    "origin" : [-1, -1, -1],
+    "do_not_place" : "glass",
+    "facing" : "x_plus", 
+    "connections" : ["wall", "wall", "wall", "wall"]
+}

@@ -1,0 +1,11 @@
+{
+    "name" : "viking_wall_lower_stone_base_door",
+    "type" : "wall",
+    "filepath" : "grimoire/asset_data/walls/viking/viking_wall_lower_stone_base_door.nbt",
+    "origin" : [2, -1, 0],
+    "facing" : "x_minus",
+    "palette" : "viking_palette",
+    "positions" : ["lower"],
+    "has_door" : true,
+    "tags" : ["viking"]
+}

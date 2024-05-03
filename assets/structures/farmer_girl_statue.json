@@ -1,8 +1,0 @@
-{
-    "name" : "farmer_girl_statue",
-    "type" : "asset_structure",
-    "filepath" : "assets/structures/farmer_girl_statue.nbt",
-    "origin" : [7, 11, 7],
-    "size" : "small",
-    "facing" : "east"
-}

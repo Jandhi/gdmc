@@ -1,0 +1,12 @@
+{
+    "name" : "japanese_wall_upper_plain",
+    "type" : "wall",
+    "filepath" : "grimoire/asset_data/walls/japanese/japanese_wall_upper_plain.nbt",
+    "origin" : [0, -1, 0],
+    "facing" : "x_minus",
+    "do_not_replace" : ["oak_trapdoor"],
+    "palette" : "japanese_dark_blackstone",
+    "positions" : ["upper"],
+    "weight" : 100,
+    "tags" : ["japanese"]
+}

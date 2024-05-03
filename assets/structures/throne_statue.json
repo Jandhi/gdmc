@@ -1,8 +1,0 @@
-{
-    "name" : "throne_statue",
-    "type" : "asset_structure",
-    "filepath" : "assets/structures/throne_statue.nbt",
-    "origin" : [3, 0, 3],
-    "size" : [7, 9, 7],
-    "facing" : "east"
-}

@@ -1,7 +1,0 @@
-{
-    "name" : "obelisk",
-    "type" : "asset_structure",
-    "filepath" : "assets/structures/obelisk.nbt",
-    "origin" : [3, 0, 3],
-    "size" : [7, 30, 7]
-}

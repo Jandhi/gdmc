@@ -1,0 +1,9 @@
+{
+    "name" : "small_kitchen_with_table",
+    "filepath" : "grimoire/asset_data/rooms/kitchen/small_kitchen_with_table.nbt",
+    "type" : "room",
+    "origin" : [-1, 0, -1],
+    "do_not_place" : "glass",
+    "facing" : "x_plus", 
+    "connections" : ["wall", "open", "open", "open"]
+}

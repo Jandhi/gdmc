@@ -1,9 +1,0 @@
-{
-    "name" : "desert_roof_outer_corner",
-    "type" : "roof_component",
-    "filepath" : "assets/roofs/desert/desert_roof_outer_corner.nbt",
-    "origin" : [0, -1, 0],
-    "shape" : "corner",
-    "palette" : "desert_dark_prismarine",
-    "tags" : ["desert"]
-}

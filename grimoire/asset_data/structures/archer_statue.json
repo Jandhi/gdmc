@@ -1,0 +1,8 @@
+{
+    "name" : "archer_statue",
+    "type" : "asset_structure",
+    "filepath" : "grimoire/asset_data/structures/archer_statue.nbt",
+    "origin" : [3, 0, 3],
+    "size" : [7, 12, 7],
+    "facing" : "north"
+}

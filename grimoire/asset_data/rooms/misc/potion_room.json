@@ -1,0 +1,9 @@
+{
+    "name" : "potion_room",
+    "filepath" : "grimoire/asset_data/rooms/misc/potion_room.nbt",
+    "type" : "room",
+    "origin" : [0, 0, -1],
+    "do_not_place" : "glass",
+    "facing" : "x_plus",
+    "connections" : ["wall", "open", "open", "wall"]
+}

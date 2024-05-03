@@ -1,9 +1,0 @@
-{
-    "name" : "bedroom_centered",
-    "filepath" : "assets/rooms/bedroom/bedroom_centered.nbt",
-    "type" : "room",
-    "origin" : [0, 0, -1],
-    "do_not_place" : "glass",
-    "facing" : "x_plus",
-    "connections" : ["open", "open", "open", "open"]
-}

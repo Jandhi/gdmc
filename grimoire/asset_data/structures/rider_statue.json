@@ -1,0 +1,8 @@
+{
+    "name" : "rider_statue",
+    "type" : "asset_structure",
+    "filepath" : "grimoire/asset_data/structures/rider_statue.nbt",
+    "origin" : [6, 0, 8],
+    "size" : [13, 18, 17],
+    "facing" : "north"
+}

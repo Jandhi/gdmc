@@ -1,0 +1,6 @@
+{
+    "name" : "basic_palisade_gate",
+    "type" : "gate",
+    "filepath" : "grimoire/asset_data/city_wall/gates/basic_palisade_gate.nbt",
+    "origin" : [1, 1, 2]
+}

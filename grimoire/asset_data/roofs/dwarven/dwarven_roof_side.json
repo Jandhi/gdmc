@@ -1,0 +1,8 @@
+{
+    "name" : "dwarven_roof_side",
+    "type" : "roof_component",
+    "filepath" : "grimoire/asset_data/roofs/dwarven/dwarven_roof_side.nbt",
+    "origin" : [1, -1, 0],
+    "shape" : "side",
+    "tags" : ["dwarven","dwarven_1","dwarven_2"]
+}

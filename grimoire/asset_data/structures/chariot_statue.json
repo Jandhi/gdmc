@@ -1,0 +1,8 @@
+{
+    "name" : "chariot_statue",
+    "type" : "asset_structure",
+    "filepath" : "grimoire/asset_data/structures/chariot_statue.nbt",
+    "origin" : [12, 0, 16],
+    "size" : [25, 25, 34],
+    "facing" : "north"
+}

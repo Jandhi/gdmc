@@ -1,0 +1,7 @@
+{
+    "name" : "obelisk",
+    "type" : "asset_structure",
+    "filepath" : "grimoire/asset_data/structures/obelisk.nbt",
+    "origin" : [3, 0, 3],
+    "size" : [7, 30, 7]
+}

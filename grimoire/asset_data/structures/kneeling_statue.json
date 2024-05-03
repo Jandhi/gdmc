@@ -1,0 +1,8 @@
+{
+    "name" : "kneeling_statue",
+    "type" : "asset_structure",
+    "filepath" : "grimoire/asset_data/structures/kneeling_statue.nbt",
+    "origin" : [3, 0, 3],
+    "size" : [7, 9, 7],
+    "facing" : "east"
+}

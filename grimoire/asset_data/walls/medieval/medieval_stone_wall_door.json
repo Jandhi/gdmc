@@ -1,0 +1,7 @@
+{
+    "name" : "medieval_stone_wall_door",
+    "type" : "wall",
+    "filepath" : "grimoire/asset_data/walls/medieval/medieval_stone_wall_door.nbt",
+    "origin" : [0, 1, 0],
+    "facing" : "x_minus"
+}

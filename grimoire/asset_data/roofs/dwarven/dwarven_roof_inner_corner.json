@@ -1,0 +1,8 @@
+{
+    "name" : "dwarven_roof_inner_corner",
+    "type" : "roof_component",
+    "filepath" : "grimoire/asset_data/roofs/dwarven/dwarven_roof_inner_corner.nbt",
+    "origin" : [0, -1, 0],
+    "shape" : "inner",
+    "tags" : ["dwarven","dwarven_1","dwarven_2"]
+}

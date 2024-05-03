@@ -1,9 +1,0 @@
-{
-    "name" : "hallway_aquarium",
-    "filepath" : "assets/rooms/hallways/hallway_aquarium.nbt",
-    "type" : "room",
-    "origin" : [-1, 0, -1],
-    "do_not_place" : "glass",
-    "facing" : "x_plus", 
-    "connections" : ["open", "wall", "open", "wall"]
-}

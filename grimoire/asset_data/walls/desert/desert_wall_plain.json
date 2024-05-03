@@ -1,0 +1,11 @@
+{
+    "name" : "desert_wall_plain",
+    "type" : "wall",
+    "filepath" : "grimoire/asset_data/walls/desert/desert_wall_plain.nbt",
+    "origin" : [0, -1, 0],
+    "facing" : "x_minus",
+    "palette" : "desert_dark_prismarine",
+    "positions" : ["upper", "lower"],
+    "tags" : ["desert"],
+    "has_door" : false
+}

@@ -1,0 +1,9 @@
+{
+    "name" : "japanese_roof_flat_brick_side",
+    "type" : "roof_component",
+    "filepath" : "grimoire/asset_data/roofs/japanese/japanese_roof_flat_brick_side.nbt",
+    "origin" : [1, -1, 0],
+    "shape" : "side",
+    "palette" : "japanese_dark_blackstone",
+    "tags" : ["japanese"]
+}

@@ -1,9 +1,0 @@
-{
-    "name" : "dwarven_wall_1_window",
-    "type" : "wall",
-    "filepath" : "assets/walls/dwarven/dwarven_wall_1_window.nbt",
-    "origin" : [1, -1, 0],
-    "facing" : "x_minus",
-    "positions" : ["upper"],
-    "tags" : ["dwarven","dwarven_1"]
-}

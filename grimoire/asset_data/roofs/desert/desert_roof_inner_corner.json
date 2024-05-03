@@ -1,0 +1,9 @@
+{
+    "name" : "desert_roof_inner_corner",
+    "type" : "roof_component",
+    "filepath" : "grimoire/asset_data/roofs/desert/desert_roof_inner_corner.nbt",
+    "origin" : [0, -1, 0],
+    "shape" : "inner",
+    "palette" : "desert_dark_prismarine",
+    "tags" : ["desert"]
+}

@@ -1,0 +1,8 @@
+{
+    "name" : "spear_statue",
+    "type" : "asset_structure",
+    "filepath" : "grimoire/asset_data/structures/spear_statue.nbt",
+    "origin" : [3, 0, 3],
+    "size" : [7, 13, 7],
+    "facing" : "east"
+}

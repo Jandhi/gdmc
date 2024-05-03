@@ -1,8 +1,0 @@
-{
-    "name" : "rider_statue",
-    "type" : "asset_structure",
-    "filepath" : "assets/structures/rider_statue.nbt",
-    "origin" : [6, 0, 8],
-    "size" : [13, 18, 17],
-    "facing" : "north"
-}

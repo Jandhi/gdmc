@@ -1,0 +1,23 @@
+- [ ] Jan
+	- [ ] Grid stays the same
+	- [ ] Help refactor
+	- [ ] Create material system
+	- [ ] Integrate material system with prefabs
+- [ ] Tim
+	- [ ] More parameters
+	- [ ] Types
+- [ ] Zach
+	- [ ] With Dylan discuss furnishing
+	- [ ] Implement system for limited furniture
+- [ ] Victor
+	- [ ] Road models
+		- [ ] Direction vectors
+	- [ ] Good placement on light posts
+	- [ ] Signposting
+	- [ ] Dry walls
+- [ ] James
+	- [ ] Clean up refactors
+	- [ ] Finish erode tests
+	- [ ] Identify spare 
+- [ ] Dylan
+	- [ ] Rewrite path generation

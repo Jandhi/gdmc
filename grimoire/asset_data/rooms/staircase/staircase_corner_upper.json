@@ -1,0 +1,9 @@
+{
+    "name" : "staircase_corner_upper",
+    "filepath" : "grimoire/asset_data/rooms/staircase/staircase_corner_upper.nbt",
+    "type" : "room",
+    "origin" : [-1, -1, -1],
+    "do_not_place" : "glass",
+    "facing" : "x_plus", 
+    "connections" : ["wall", "open", "open", "wall"]
+}

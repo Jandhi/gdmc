@@ -1,0 +1,9 @@
+{
+    "name" : "dwarven_wall_2_window",
+    "type" : "wall",
+    "filepath" : "grimoire/asset_data/walls/dwarven/dwarven_wall_2_window.nbt",
+    "origin" : [1, -1, 0],
+    "facing" : "x_minus",
+    "positions" : ["upper"],
+    "tags" : ["dwarven","dwarven_2"]
+}

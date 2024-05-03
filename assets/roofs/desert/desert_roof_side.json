@@ -1,9 +1,0 @@
-{
-    "name" : "desert_roof_side",
-    "type" : "roof_component",
-    "filepath" : "assets/roofs/desert/desert_roof_side.nbt",
-    "origin" : [0, -1, 0],
-    "shape" : "side",
-    "palette" : "desert_dark_prismarine",
-    "tags" : ["desert"]
-}

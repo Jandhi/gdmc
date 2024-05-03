@@ -1,0 +1,8 @@
+{
+    "name" : "well",
+    "type" : "asset_structure",
+    "filepath" : "grimoire/asset_data/structures/well.nbt",
+    "origin" : [2, 3, 2],
+    "size" : [5, 8, 5],
+    "facing" : "east"
+}

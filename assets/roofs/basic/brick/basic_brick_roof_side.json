@@ -1,8 +1,0 @@
-{
-    "name" : "basic_brick_roof_side",
-    "type" : "roof_component",
-    "filepath" : "assets/roofs/basic/basic_brick_roof_side.nbt",
-    "origin" : [2, 0, 0],
-    "shape" : "side",
-    "palette" : "default_palette"
-}

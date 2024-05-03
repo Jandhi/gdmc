@@ -11,7 +11,7 @@ from core.maps.map import Map
 
 SEED = 36322
 
-editor = Editor(buffering=True, bufferLimit=5, caching=True)
+editor = Editor(buffering=True, bufferLimit=32, caching=True)
 
 area = editor.getBuildArea()
 editor.transform = (area.begin.x, 0, area.begin.z)
@@ -33,9 +33,10 @@ end_z = end_z - end_z % 4
 end_y = world_slice.heightmaps['MOTION_BLOCKING_NO_LEAVES'][end_x][end_z]
 end = ivec3(end_x, end_y, end_z)
 
-editor.placeBlock(start, Block('minecraft:glowstone'))
-editor.placeBlock(end, Block('minecraft:glowstone'))
+# editor.placeBlock(start, Block('minecraft:glowstone'))
+# editor.placeBlock(end, Block('minecraft:glowstone'))
 
-highway = route_highway(start, end, map, editor, is_debug=True)
+highway = route_highway(start, end, map, editor, is_debug=False)
 highway = fill_out_highway(highway)
-build_highway(highway, editor, world_slice, map)
+build_highway(highway, editor, world_slice, map, 1,True)
+editor.flushBuffer()

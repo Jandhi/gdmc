@@ -95,8 +95,8 @@ def route_highway(start : ivec3, end : ivec3, map : Map, editor : Editor, is_deb
             district_cost += 50
 
         near_wall_cost = 0
-        if map.near_wall and map.near_wall[last.x][last.z]:
-            near_wall_cost += 10
+        # if map.near_wall and map.near_wall[last.x][last.z]:
+        #     near_wall_cost += 10
 
         if map.water[last.x][last.z]:
             base_length_cost += 30 # WATER COST. Making this big means water gets avoided when possible.

@@ -5,9 +5,9 @@ sys.path[0] = sys.path[0].removesuffix('\\paths\\tests')
 # Actual file
 from gdpc import Editor, Block
 from gdpc.vector_tools import ivec3
-from paths.route_highway import route_highway, fill_out_highway
-from paths.build_highway import build_highway
-from core.maps.map import Map
+from grimoire.paths.route_highway import route_highway, fill_out_highway
+from grimoire.paths.build_highway import build_highway
+from grimoire.core.maps import Map
 
 SEED = 36322
 

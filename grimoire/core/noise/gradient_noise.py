@@ -1,7 +1,7 @@
 from glm import ivec2, floor
 from gdpc import vector_tools as vt
 
-from core.noise.hash import hash22
+from .hash import hash22
 
 
 def dot(v1: vt.vec2, v2: vt.vec2):

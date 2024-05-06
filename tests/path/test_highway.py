@@ -38,5 +38,5 @@ end = ivec3(end_x, end_y, end_z)
 
 highway = route_highway(start, end, map, editor, is_debug=False)
 highway = fill_out_highway(highway)
-build_highway(highway, editor, world_slice, map, 1,True)
+build_highway(highway, editor, world_slice, map, True)
 editor.flushBuffer()

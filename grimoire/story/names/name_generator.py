@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
-from ..core.assets.asset import Asset
-from ..core.generator.module import Module
+from ...core.assets.asset import Asset
+from ...core.generator.module import Module
 
 
 class NamingSchema(Asset):

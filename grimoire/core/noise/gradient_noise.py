@@ -1,4 +1,4 @@
-from glm import ivec2, floor
+from glm import floor, vec2
 from gdpc import vector_tools as vt
 
 from .hash import hash22
@@ -8,7 +8,7 @@ def dot(v1: vt.vec2, v2: vt.vec2):
     return v1.x * v2.x + v1.y * v2.y
 
 # returns a value between 0 and 1
-def get_gradient_noise(pos: ivec2, grid_size: float) -> float:
+def get_gradient_noise(pos: vec2, grid_size: float) -> float:
     p = vt.vec2(pos.x, pos.y) / (grid_size + 0.001)
 
     i = vt.vec2(floor(p.x), floor(p.y))

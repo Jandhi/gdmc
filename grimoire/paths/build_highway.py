@@ -6,44 +6,42 @@ from gdpc.vector_tools import ivec3, ivec2
 
 from ..core.noise.random import choose
 from ..core.noise.hash import hash
-from ..core.structures.legacy_directions import cardinal, get_ivec2, to_text
+from ..core.structures.legacy_directions import cardinal, get_ivec2, to_text, all_8, ordinal
 from ..core.utils.bounds import is_in_bounds2d
 from ..core.maps import Map
 from ..core.noise.gradient_noise import get_gradient_noise
 
-def build_highway(points : list[ivec3], editor : Editor, world_slice: WorldSlice, map : Map, path_width: int = 1, border = False):
-    master_points       : set[ivec2] = set()
+def build_highway(points : list[ivec3], editor : Editor, world_slice: WorldSlice, map : Map, border = False):
+    master_points       : set[ivec2] = set() #Do we need so many sets for this?
     neighbour_points    : set[ivec2] = set()
     border_points       : set[ivec2] = set()
-    final_point_heights : dict[ivec2, int] = {}
+    final_point_heights : dict[ivec2, int] = {} #TODO: Should be merged with below
     border_point_heights: dict[ivec2, int] = {}
     blocks              : dict[ivec2, Block] = {}
 
-    # loops all points in the highway
     for point in points:
         point_2d = ivec2(point.x, point.z)
 
         master_points.add(point_2d)
         final_point_heights[point_2d] = point.y
 
-        # adds the neighbours to a set
-        for x in range(-1*path_width, path_width+1):
-            for z in range(-1*path_width, path_width+1):
-                neighbour = point_2d + ivec2(x, z)
+        for direction in cardinal + ordinal:
+            neighbour = point_2d + get_ivec2(direction)
 
-                if not is_in_bounds2d(neighbour, world_slice):
-                    continue
+            if not is_in_bounds2d(neighbour, world_slice):
+                continue
 
-                if neighbour in neighbour_points or neighbour in master_points:
-                    continue
+            if neighbour in neighbour_points or neighbour in master_points:
+                continue
 
-                neighbour_points.add(neighbour)
-                final_point_heights[neighbour] = point.y # this is an estimate of height to help the next step
+            neighbour_points.add(neighbour)
+            final_point_heights[neighbour] = point.y
 
     if border:
+        #TODO: Extrapolate to function for this and above
         for (point) in neighbour_points:
-            for dir in cardinal:
-                neighbour = point + get_ivec2(dir)
+            for direction in cardinal:
+                neighbour = point + get_ivec2(direction)
 
                 if not is_in_bounds2d(neighbour, world_slice):
                     continue
@@ -61,36 +59,34 @@ def build_highway(points : list[ivec3], editor : Editor, world_slice: WorldSlice
     for point in border_point_heights:
         blocks[point] = get_block(point, border_point_heights, border_path_palette)
 
-    # place the blocks
-    for point in final_point_heights:
-        x, z = point
-        y = final_point_heights[point] - 1
+    place_blocks(final_point_heights, map, world_slice, editor, blocks)
+    place_blocks(border_point_heights, map, world_slice, editor, blocks)
 
-        # don't place in urban area
-        if map.districts[x][z] is not None and map.districts[x][z].is_urban:
+def place_blocks(point_heights, map: Map, world_slice: WorldSlice, editor: Editor, blocks: dict[ivec2, Block]):
+    for point in point_heights:
+        x, z = point
+        y = point_heights[point] - 1
+
+        if is_urban_area(point, map):
             continue
 
-        if world_slice.heightmaps['MOTION_BLOCKING_NO_LEAVES'][x][z] > y:
+        if obstructions_above(point, y, world_slice):
             for i in range(1, 7):
                 editor.placeBlock((x, y + i, z), Block('air'))
 
         editor.placeBlock((x, y, z), blocks[point])
 
-    for point in border_point_heights:
-        x, z = point
-        y = border_point_heights[point] - 1
+def obstructions_above(point : ivec2, y: int, world_slice : WorldSlice) -> bool:
+    return world_slice.heightmaps['MOTION_BLOCKING_NO_LEAVES'][point.x][point.y] > y
 
-        if world_slice.heightmaps['MOTION_BLOCKING_NO_LEAVES'][x][z] > y:
-            for i in range(1, 7):
-                editor.placeBlock((x, y + i, z), Block('air'))
-
-        editor.placeBlock((x, y, z), blocks[point])
-
+def is_urban_area(point: ivec2, map: Map) -> bool:
+    return map.districts[point.x][point.y] is not None and map.districts[point.x][point.y].is_urban
 
 def get_block(point : ivec2, point_heights : dict[ivec2, int], palette: dict[float, Union[tuple[Block], Block]]) -> Block:
     y_in_dir = {}
     y = point_heights[point]
 
+    # I think this finds the direction of the path to place stairs and such, but frankly I'm not sure, so I'm leaving it alone
     for direction in cardinal:
         dv = get_ivec2(direction)
 
@@ -107,10 +103,6 @@ def get_block(point : ivec2, point_heights : dict[ivec2, int], palette: dict[flo
 
         if point_heights[point + dv] == y + 1 and point_heights[point - dv] == y - 1:
             path_dir = to_text(direction)
-        
-    # if all(y_in_dir[direction] < y for direction in y_in_dir) and point_heights[point] > 0:
-    #     point_heights[point] -= 1
-    #     return get_block(point, point_heights, palette)
 
     return get_from_palette(palette, point)
 
@@ -129,7 +121,7 @@ def get_from_palette(palette : dict[float, Union[tuple[Block], Block]], pos : iv
 
     return choose(hash(pos.x * pos.y, pos.x + pos.y), block_list)
 
-# Note the value distribution is NOT uniform, but the mean is .5, and they are relatively normally distributed
+# TODO: Replace with palette asset system
 main_path_palette = {
     .5: Block("minecraft:packed_mud"),
     1.: Block("minecraft:dirt_path")

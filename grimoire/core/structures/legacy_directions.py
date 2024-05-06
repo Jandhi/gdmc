@@ -19,11 +19,13 @@ up = y_plus
 down = y_minus
 cardinal = (north, east, south, west)
 
+
 # Compound Directions
 northeast = f"{north} and {east}"
 northwest = f"{north} and {west}"
 southwest = f"{south} and {west}"
 southeast = f"{south} and {east}"
+ordinal = (northeast, northwest, southwest, southeast)
 all_8 = (north, east, south, west, northeast, northwest, southwest, southeast)
 
 directions = (north, east, south, west, up, down)

@@ -2,6 +2,8 @@
 import sys
 import time
 
+from grimoire.core.styling.palette import Palette
+
 sys.path[0] = sys.path[0].removesuffix("\\tests\\placement")
 
 # Actual file
@@ -9,7 +11,7 @@ from gdpc import Editor, Box
 from gdpc.lookup import GRANULARS
 from glm import ivec2
 
-from grimoire.core.assets.load_assets import load_assets
+from grimoire.core.assets.asset_loader import load_assets
 from grimoire.core.maps import Map, get_build_map
 from grimoire.core.noise.rng import RNG
 from grimoire.core.utils.sets.find_outer_points import find_outer_and_inner_points
@@ -27,7 +29,6 @@ from grimoire.districts.wall import (
 )
 from grimoire.industries.biomes import snowy, rocky, desert, forest
 from grimoire.industries.industry import get_district_biomes
-from grimoire.palette import Palette
 from grimoire.placement.city_blocks import add_city_blocks
 from grimoire.terrain.forest import Forest
 from grimoire.terrain.plateau import plateau

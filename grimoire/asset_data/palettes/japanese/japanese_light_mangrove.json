@@ -1,9 +1,0 @@
-{
-    "name" : "japanese_light_mangrove",
-    "tags" : ["japanese"], 
-    "type" : "palette",
-    "primary_wood" : "birch",
-    "secondary_wood" : "oak",
-    "primary_stone" : "mangrove_plank",
-    "primary_stone_accent" : "polished_blackstone"
-}

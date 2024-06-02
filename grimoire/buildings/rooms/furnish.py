@@ -5,7 +5,6 @@ from gdpc.vector_tools import ivec3
 
 from ..legacycell import LegacyCell
 from ...core.noise.rng import RNG
-from ...palette import Palette
 from .room import Room
 from ...core.structures.grid import Grid
 from ...core.structures.legacy_directions import (
@@ -18,6 +17,7 @@ from ...core.structures.legacy_directions import (
     south,
     west,
 )
+from ...core.styling.palette import Palette
 
 ROOM_LIST = [
     "kitchen_no_window_small",

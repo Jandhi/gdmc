@@ -1,0 +1,12 @@
+{
+  "name" : "mangrove",
+  "type" : "material",
+  "blocks" : {
+    "block" : "mangrove_planks",
+    "stairs" : "mangrove_stairs",
+    "slab" : "mangrove_slab",
+    "fence" : "mangrove_fence",
+    "trapdoor" : "mangrove_trapdoor",
+    "sign" : "mangrove_sign"
+  }
+}

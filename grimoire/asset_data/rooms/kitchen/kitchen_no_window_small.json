@@ -3,7 +3,7 @@
     "filepath" : "grimoire/asset_data/rooms/kitchen/kitchen_no_window_small.nbt",
     "type" : "room",
     "origin" : [-1, 0, -1],
-    "do_not_place" : "glass",
+    "do_not_place" : ["glass"],
     "facing" : "x_plus", 
     "connections" : ["wall", "open", "open", "open"]
 }

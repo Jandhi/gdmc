@@ -1,7 +1,8 @@
 from gdpc.vector_tools import ivec3
 
 from ...assets.asset import Asset, asset_defaults
-from ....palette import Palette
+from grimoire.core.styling.legacy_palette import LegacyPalette
+from ...styling.palette import Palette
 
 
 # Base class with metadata for an NBT file
@@ -9,7 +10,7 @@ from ....palette import Palette
 @asset_defaults(
     palette=None,
     do_not_replace=[],
-    replace=[],
+    replace={},
     do_not_place=[],
 )
 class NBTAsset(Asset):
@@ -26,8 +27,3 @@ class NBTAsset(Asset):
     do_not_replace: list[str]  # blocks that should not be swapped by palette swapper
     replace: dict[str, str]  # blocks that must be swapped out
     do_not_place: list[str]  # blocks that shouldn't be placed at all
-
-    def on_construct(self) -> None:
-        super().on_construct()
-
-        self.origin = ivec3(*self.origin)  # convert list to tuple

@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from ..core.structures.grid import Grid
 from ..buildings.legacycell import LegacyCell
 from gdpc.vector_tools import ivec3
-from ..palette import Palette
+from ..core.styling.palette import Palette
 
 
 @dataclass
@@ -19,3 +19,8 @@ class BuildingPlan:
         self.cells = list(self.cell_map.values())
         self.grid = grid
         self.palette = palette
+
+    def add_cell(self, position: ivec3) -> None:
+        cell = LegacyCell(position=position, plan=self)
+        self.cell_map[position] = cell
+        self.cells.append(cell)

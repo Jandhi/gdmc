@@ -1,0 +1,13 @@
+{
+  "name" : "spruce",
+  "type" : "material",
+  "dithering_pattern" : "random",
+  "blocks" : {
+    "block" : "spruce_planks",
+    "stairs" : "spruce_stairs",
+    "slab" : "spruce_slab",
+    "fence" : "spruce_fence",
+    "trapdoor" : "spruce_trapdoor",
+    "sign" : "spruce_sign"
+  }
+}

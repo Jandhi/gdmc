@@ -1,0 +1,13 @@
+{
+  "name" : "bricks2",
+  "type" : "material",
+  "dithering_pattern" : "random",
+  "lighter": "bricks1",
+  "darker" : "bricks3",
+  "blocks" : {
+    "block" : "deepslate_bricks",
+    "stairs" : "deepslate_brick_stairs",
+    "slab" : "deepslate_brick_slab",
+    "wall" : "deepslate_brick_wall"
+  }
+}

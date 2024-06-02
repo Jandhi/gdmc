@@ -1,0 +1,7 @@
+{
+  "name" : "white_concrete",
+  "type" : "material",
+  "blocks" : {
+    "block" : "white_concrete"
+  }
+}

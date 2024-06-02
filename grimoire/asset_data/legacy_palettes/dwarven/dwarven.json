@@ -1,0 +1,9 @@
+{
+    "name" : "dwarven",
+    "tags" : ["dwarven"], 
+    "type" : "legacy_palette",
+    "primary_wood" : "dark_oak",
+    "secondary_wood" : "spruce",
+    "primary_stone" : "andesite",
+    "primary_stone_accent" : "stone"
+}

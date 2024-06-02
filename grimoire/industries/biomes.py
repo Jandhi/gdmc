@@ -132,7 +132,7 @@ cold = {
     **snowy,
 }
 
-# unique style
+# unique styling
 desert = {"desert": (ROUGHNESS_LOW, TEMPERATURE_HIGH, ACQUATIC_NONE)}
 
 swamp = {

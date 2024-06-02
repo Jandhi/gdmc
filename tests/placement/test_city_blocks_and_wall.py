@@ -1,6 +1,8 @@
 # Allows code to be run in root directory
 import sys
 
+from grimoire.core.styling.palette import Palette
+
 sys.path[0] = sys.path[0].removesuffix("tests\\placement")
 
 # Actual file
@@ -10,14 +12,14 @@ from gdpc.geometry import line3D
 from grimoire.districts.generate_districts import generate_districts
 from grimoire.placement.city_blocks import add_city_blocks
 from grimoire.core.utils.geometry import get_outer_points
-from grimoire.core.maps.map import Map
-from grimoire.core.assets.load_assets import load_assets
+from grimoire.core.maps import Map
+from grimoire.core.assets.asset_loader import load_assets
 from grimoire.terrain.smooth_edges import smooth_edges
 from grimoire.terrain.plateau import plateau
-from grimoire.palette.palette import Palette
+from grimoire.core.styling.legacy_palette import LegacyPalette
 from grimoire.core.noise.rng import RNG
 from grimoire.districts.wall import order_wall_points, build_wall_standard_with_inner
-from grimoire.core.maps.building_map import BUILDING, GATE
+from grimoire.core.maps import BUILDING, GATE
 from grimoire.core.utils.bounds import area_2d
 from grimoire.paths.route_highway import route_highway, fill_out_highway
 from grimoire.paths.build_highway import build_highway
@@ -28,7 +30,7 @@ SEED = 77273
 DO_TERRAFORMING = False
 
 editor = Editor(buffering=True, caching=True)
-load_assets("assets")
+load_assets("grimoire/asset_data")
 
 area = editor.getBuildArea()
 
@@ -47,7 +49,7 @@ map.districts = district_map
 
 # set up palettes
 eligible_palettes = list(
-    filter(lambda palette: "desert" in palette.tags, Palette.all())
+    filter(lambda palette: "japanese" in palette.tags, Palette.all())
 )
 rng = RNG(SEED, "palettes")
 
@@ -131,7 +133,7 @@ wall_points, wall_dict = get_outer_points(inner_points, world_slice)
 wall_points_list = order_wall_points(wall_points, wall_dict)
 
 rng = RNG(SEED)
-palette = Palette.find("desert_dark_prismarine")
+palette = Palette.find("japanese")
 
 # can use either test_blocks for more urban or test_blocks_dirt for dirty ground
 # replace_ground(inner_points, test_blocks, rng, map.water)

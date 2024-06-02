@@ -1,0 +1,21 @@
+{
+  "name" : "japanese_red",
+  "type" : "palette",
+
+  "resolution_priority" : "stone",
+  "materials" : {
+    "primary_wall" : "white_terracotta",
+    "primary_wood" : "mangrove",
+    "secondary_wood" : "oak",
+    "primary_roof" : "bricks3",
+    "secondary_roof" : "polished3",
+    "pillar" : "stripped_mangrove_log",
+    "primary_stone" : "bricks3",
+    "secondary_stone" : "bricks3"
+  },
+
+  "primary_color" : "red",
+  "secondary_color" : "white",
+
+  "tags" : ["japanese"]
+}

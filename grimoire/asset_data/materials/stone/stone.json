@@ -1,0 +1,12 @@
+{
+  "name" : "stone",
+  "type" : "material",
+  "dithering_pattern" : "random",
+  "darker" : "andesite",
+  "blocks" : {
+    "block": "stone",
+    "stairs": "stone_stairs",
+    "slab": "stone_slab",
+    "wall": "andesite_wall"
+  }
+}

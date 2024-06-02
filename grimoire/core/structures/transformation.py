@@ -1,4 +1,4 @@
-from .block import Block
+from gdpc.block import Block
 from .legacy_directions import (
     x_plus,
     x_minus,
@@ -85,27 +85,27 @@ class Transformation:
         return [self.apply_to_block(block) for block in palette]
 
     def apply_to_block(self, block: Block) -> Block:
-        name = block.name
+        name = block.id
         properties = {}
 
-        for pname, pvalue in block.properties.items():
+        for prop_name, prop_value in block.states.items():
             direction_names = [to_text(direction) for direction in directions]
 
-            if pname in direction_names:
-                properties[self.apply_to_text(pname)] = pvalue
-            elif pvalue in direction_names:
-                properties[pname] = self.apply_to_text(pvalue)
+            if prop_name in direction_names:
+                properties[self.apply_to_text(prop_name)] = prop_value
+            elif prop_value in direction_names:
+                properties[prop_name] = self.apply_to_text(prop_value)
             # For axes
-            elif pvalue in ("x", "z") and self.diagonal_mirror:
-                properties[pname] = {"x": "z", "z": "x"}[pvalue]
+            elif prop_value in ("x", "z") and self.diagonal_mirror:
+                properties[prop_name] = {"x": "z", "z": "x"}[prop_value]
             # For right and left
-            elif pvalue in ("right", "left") and self.mirror[2]:
-                properties[pname] = {"right": "left", "left": "right"}[pvalue]
+            elif prop_value in ("right", "left") and self.mirror[2]:
+                properties[prop_name] = {"right": "left", "left": "right"}[prop_value]
             # Everything else
             else:
-                properties[pname] = pvalue
+                properties[prop_name] = prop_value
 
-        return Block(name, properties)
+        return Block(id=name, states=properties)
 
     def apply_to_point(
         self,

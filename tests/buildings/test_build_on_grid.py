@@ -14,10 +14,10 @@ from grimoire.buildings.walls.wall import Wall
 from grimoire.buildings.rooms.room import Room
 
 
-from grimoire.core.assets.load_assets import load_assets
+from grimoire.core.assets.asset_loader import load_assets
 from grimoire.core.structures.legacy_directions import cardinal
 
-from grimoire.palette import Palette
+from grimoire.core.styling.legacy_palette import LegacyPalette
 from grimoire.buildings.roofs.roof import Roof
 
 editor = Editor(buffering=True, caching=True)
@@ -28,8 +28,14 @@ from gdpc.vector_tools import ivec3
 
 area = editor.getBuildArea()
 editor.transform = (area.begin.x, 3, area.begin.z)
-grid = Grid()
-load_assets("assets")
+grid = Grid(
+    origin=ivec3(
+        x=area.size.x // 2,
+        y=-61,
+        z=area.size.z // 2,
+    )
+)
+load_assets("grimoire\\asset_data")
 
 rng = RNG(SEED, "get_origins")
 
@@ -48,7 +54,7 @@ styles = {
 style = styles["viking"]
 
 # PALETTE
-palette: Palette = Palette.find("japanese_dark_blackstone")
+palette: LegacyPalette = LegacyPalette.find("japanese_dark_blackstone")
 
 # WALLS
 lower_wall: Wall = Wall.find(style["lower"])

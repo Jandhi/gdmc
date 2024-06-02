@@ -1,0 +1,13 @@
+{
+  "name" : "smooth_basalt",
+  "type" : "material",
+  "dithering_pattern" : "random",
+  "lighter" : "cobbled_deepslate",
+  "darker" : "blackstone",
+  "blocks" : {
+    "block": "smooth_basalt",
+    "stairs": "cobbled_deepslate_stairs",
+    "slab": "cobbled_deepslate_slab",
+    "wall": "cobbled_deepslate_wall"
+  }
+}

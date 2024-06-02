@@ -1,0 +1,12 @@
+{
+  "name" : "dark_oak",
+  "type" : "material",
+  "blocks" : {
+    "block" : "dark_oak_planks",
+    "stairs" : "dark_oak_stairs",
+    "slab" : "dark_oak_slab",
+    "fence" : "dark_oak_fence",
+    "trapdoor" : "dark_oak_trapdoor",
+    "sign" : "dark_oak_sign"
+  }
+}

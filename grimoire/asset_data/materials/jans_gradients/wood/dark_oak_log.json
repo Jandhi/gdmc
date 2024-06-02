@@ -1,0 +1,8 @@
+{
+  "name" : "dark_oak_log",
+  "type" : "material",
+  "lighter" : "spruce_log",
+  "blocks" : {
+    "block" : "dark_oak_wood"
+  }
+}

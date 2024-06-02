@@ -1,0 +1,7 @@
+{
+  "name" : "cyan_terracotta",
+  "type" : "material",
+  "dithering_pattern" : "random",
+  "lighter" : "stone",
+  "darker" : "cobbled_deepslate"
+}

@@ -1,6 +1,12 @@
 from gdpc import WorldSlice
 from gdpc.vector_tools import ivec3, ivec2
-from typing import Iterator
+from typing import Iterator, TypeVar
+
+T = TypeVar("T")
+
+
+def clamp(value: T, minimum: T, maximum: T) -> T:
+    return min(maximum, max(minimum, value))
 
 
 def is_in_bounds(point: ivec3, world_slice: WorldSlice) -> bool:

@@ -1,0 +1,10 @@
+{
+  "name" : "spruce_log",
+  "type" : "material",
+  "dithering_pattern" : "random",
+  "lighter" : "oak_log",
+  "darker" : "dark_oak_log",
+  "blocks" : {
+    "block" : "spruce_wood"
+  }
+}

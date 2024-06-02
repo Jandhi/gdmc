@@ -57,6 +57,7 @@ class BuildingShape(Asset):
 
             if new_points != self.points or self.door_direction != new_door_direction:
                 new_shape = BuildingShape()
+                new_shape.type = BuildingShape.type_name
                 new_shape.points = new_points
                 new_shape.door_direction = new_door_direction
                 new_shape.name = f"{self.name}_variant_{val}"

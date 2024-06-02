@@ -1,16 +1,16 @@
 # Allows code to be run in root directory
 import sys
 
+from grimoire.core.maps import get_water_map, get_build_map
+from grimoire.landmarks.market.market import Market
+
 sys.path[0] = sys.path[0].removesuffix("\\landmarks\\story")
 
 # Actual file
 from gdpc.editor import Editor
-from ..core.assets.load_assets import load_assets
-from ..core.structures.asset_structure import AssetStructure
+from grimoire.core.assets.asset_loader import load_assets
+from grimoire.core.structures.asset_structure import AssetStructure
 from gdpc.vector_tools import ivec3
-from ..terrani.water_map import get_water_map
-from ..terrani.build_map import get_build_map
-from ..core.structures.market.market import Market
 
 SEED = 2
 
@@ -55,4 +55,4 @@ build_nbt(
 
 # market
 test_market = Market(ivec3(area.middle.x, y, area.middle.z))
-test_market.build(editor)
+test_market.place_block(editor)

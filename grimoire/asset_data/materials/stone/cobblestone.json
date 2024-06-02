@@ -1,0 +1,14 @@
+{
+  "name" : "cobblestone",
+  "type" : "material",
+  "dithering_pattern" : "random",
+  "lighter" : "andesite",
+  "darker" : "cobbled_deepslate",
+
+  "blocks" : {
+    "block" : "cobblestone",
+    "stairs" : "cobblestone_stairs",
+    "slab" : "cobblestone_slab",
+    "wall" : "cobblestone_wall"
+  }
+}

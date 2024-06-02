@@ -1,0 +1,12 @@
+{
+  "name" : "oak",
+  "type" : "material",
+  "blocks" : {
+    "block" : "oak_planks",
+    "stairs" : "oak_stairs",
+    "slab" : "oak_slab",
+    "fence" : "oak_fence",
+    "trapdoor" : "oak_trapdoor",
+    "sign" : "oak_sign"
+  }
+}

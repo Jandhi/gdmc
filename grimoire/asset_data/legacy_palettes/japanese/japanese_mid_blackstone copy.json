@@ -1,0 +1,9 @@
+{
+    "name" : "japanese_mid_mangrove",
+    "tags" : ["japanese"], 
+    "type" : "legacy_palette",
+    "primary_wood" : "spruce",
+    "secondary_wood" : "oak",
+    "primary_stone" : "mangrove_plank",
+    "primary_stone_accent" : "polished_blackstone"
+}

@@ -1,0 +1,12 @@
+{
+  "name" : "dead_coral",
+  "type" : "composite_material",
+  "dithering_pattern" : "none",
+  "submaterials" : {
+    "dead_brain_coral_block" : 10,
+    "dead_bubble_coral_block" : 10,
+    "dead_fire_coral_block": 10,
+    "dead_horn_coral_block": 10,
+    "dead_tube_coral_block": 10
+  }
+}

@@ -1,4 +1,4 @@
-from .hash import hash, hash_string
+from .hash import sq_hash, hash_string
 from .seed import Seed
 
 
@@ -14,7 +14,7 @@ class RNG(Seed):
             self.seed = hash_string(seed, string_seed)
 
     def next(self) -> int:
-        val = hash(self.seed, self.state)
+        val = sq_hash(self.seed, self.state)
         self.state += 1
         return val
 

@@ -1,0 +1,7 @@
+{
+  "name" : "dead_horn_coral_block",
+  "type" : "material",
+  "dithering_pattern" : "random",
+  "lighter" : "cobblestone",
+  "darker" : "cobbled_deepslate"
+}

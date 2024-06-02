@@ -5,6 +5,7 @@ colored = "*"
 nbtlib = "*"
 numpy = "*"
 tqdm = "*"
+perlin-noise = "*"
 
 [dev-packages]
 

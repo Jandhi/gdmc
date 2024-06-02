@@ -1,8 +1,17 @@
 {
-    "name" : "wall_palette",
-    "type" : "palette",
+  "name" : "wall_palette",
+  "type" : "palette",
+
+  "resolution_priority" : "stone",
+  "materials" : {
     "primary_wood" : "oak",
     "secondary_wood" : "spruce",
-    "primary_stone" : "stone_brick",
-    "primary_stone_accent" : "cobblestone"
+    "primary_stone" : "bricks2",
+    "secondary_stone" : "bricks3"
+  },
+
+  "primary_color" : "red",
+  "secondary_color" : "white",
+
+  "tags" : ["japanese"]
 }

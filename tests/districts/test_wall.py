@@ -9,16 +9,19 @@ from gdpc.vector_tools import ivec2
 from grimoire.core.maps import get_water_map
 from grimoire.districts.generate_districts import generate_districts
 from grimoire.core.utils.geometry import get_outer_points
-from grimoire.districts.wall import order_wall_points, build_wall_standard_with_inner
+from grimoire.districts.wall import (
+    order_wall_points,
+    build_wall_standard,
+)
 from grimoire.core.noise.rng import RNG
-from grimoire.palette import Palette
-from grimoire.core.assets.load_assets import load_assets
+from grimoire.core.styling.legacy_palette import LegacyPalette
+from grimoire.core.assets.asset_loader import load_assets
 
 SEED = 7
 
 editor = Editor(buffering=True, caching=True)
 # editor.doBlockUpdates(value = False)
-load_assets("assets")
+load_assets("grimoire\\asset_data")
 
 area = editor.getBuildArea()
 editor.transform = (area.begin.x, 0, area.begin.z)
@@ -81,23 +84,25 @@ wall_points, wall_dict = get_outer_points(inner_points, world_slice)
 wall_points_list = order_wall_points(wall_points, wall_dict)
 
 rng = RNG(SEED)
-palette = Palette.find("japanese_dark_blackstone")
+palette = LegacyPalette.find("japanese_dark_blackstone")
 
 # uncomment one of these to story one of the three wall types
 
 for wall_points in wall_points_list:
-    build_wall_standard_with_inner(
-        wall_points,
-        wall_dict,
-        inner_points,
-        editor,
-        world_slice,
-        water_map,
-        rng,
-        palette,
+    # build_wall_standard_with_inner(
+    #     wall_points,
+    #     wall_dict,
+    #     inner_points,
+    #     editor,
+    #     world_slice,
+    #     water_map,
+    #     rng,
+    #     palette,
+    # )
+    # build_wall_palisade(wall_points, editor, world_slice, water_map, rng, palette)
+    build_wall_standard(
+        wall_points, wall_dict, inner_points, editor, world_slice, water_map, palette
     )
-# build_wall_palisade(wall_points, editor, world_slice, water_map, rng, palette)
-# build_wall_standard(wall_points, wall_dict, inner_points, editor, world_slice, water_map, palette)
 
 # can use either test_blocks for more urban or test_blocks_dirt for dirty ground
 replace_ground(inner_points, test_blocks_dirt, rng, water_map)

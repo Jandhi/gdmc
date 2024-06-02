@@ -1,8 +1,0 @@
-{
-    "name" : "acacia_palette",
-    "type" : "palette",
-    "primary_wood" : "acacia",
-    "secondary_wood" : "birch",
-    "primary_stone" : "sandstone",
-    "primary_stone_accent" : "red_sandstone"
-}

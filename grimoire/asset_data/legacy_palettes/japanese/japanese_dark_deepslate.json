@@ -1,0 +1,9 @@
+{
+    "name" : "japanese_dark_deepslate",
+    "tags" : ["japanese"], 
+    "type" : "legacy_palette",
+    "primary_wood" : "dark_oak",
+    "secondary_wood" : "spruce",
+    "primary_stone" : "deepslate_tile",
+    "primary_stone_accent" : "polished_deepslate"
+}

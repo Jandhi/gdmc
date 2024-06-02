@@ -1,0 +1,9 @@
+{
+    "name" : "japanese_mid2",
+    "tags" : ["japanese"], 
+    "type" : "legacy_palette",
+    "primary_wood" : "spruce",
+    "secondary_wood" : "oak",
+    "primary_stone" : "deepslate_tile",
+    "primary_stone_accent" : "polished_deepslate"
+}

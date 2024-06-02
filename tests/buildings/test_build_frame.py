@@ -1,6 +1,10 @@
 # Allows code to be run in root directory
 import sys
 
+from grimoire.buildings.roofs.build_roof import build_roof
+from grimoire.buildings.roofs.roof_component import RoofComponent
+from grimoire.core.noise.rng import RNG
+from grimoire.core.styling.palette import Palette
 from tests.buildings.random_shape import random_shape
 
 sys.path[0] = sys.path[0].removesuffix("tests\\buildings")
@@ -9,15 +13,14 @@ sys.path[0] = sys.path[0].removesuffix("tests\\buildings")
 from gdpc import Editor
 from gdpc.vector_tools import ivec3
 from grimoire.core.structures.grid import Grid
-from grimoire.core.assets.load_assets import load_assets
+from grimoire.core.assets.asset_loader import load_assets
 from grimoire.buildings.building_plan import BuildingPlan
 from grimoire.buildings.walls.build_walls import build_walls
-from grimoire.core.noise.rng import RNG
 from grimoire.buildings.walls.wall import Wall
-from grimoire.palette import Palette
+from grimoire.core.styling.legacy_palette import LegacyPalette
 from grimoire.buildings.build_floor import build_floor
 
-SEED = 243
+SEED = 0x624AAB
 
 editor = Editor(buffering=True, caching=True)
 
@@ -31,12 +34,13 @@ grid = Grid(
         z=area.size.z // 2,
     )
 )
-load_assets("assets")
+load_assets("grimoire/asset_data")
 
 shape = random_shape(SEED)
 
-palette = Palette.find("japanese_dark_blackstone")
+palette = Palette.find("japanese")
 plan = BuildingPlan(shape, grid, palette)
+grid.plan = plan
 
 build_floor(plan, editor)
 
@@ -49,4 +53,11 @@ build_walls(
         Wall.find("japanese_wall_upper_traps"),
     ],
     RNG(SEED, "build_walls"),
+)
+
+build_roof(
+    plan,
+    editor,
+    [roof for roof in RoofComponent.all() if "japanese" in roof.tags],
+    SEED,
 )

@@ -1,0 +1,10 @@
+{
+    "name" : "desert_red_dark_prismarine",
+    "tags" : ["desert"], 
+    "type" : "legacy_palette",
+    "primary_wood" : "oak",
+    "secondary_wood" : "birch",
+    "primary_stone" : "smooth_red_sandstone",
+    "primary_stone_accent" : "cut_red_sandstone",
+    "secondary_stone" : "dark_prismarine"
+}

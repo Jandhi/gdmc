@@ -1,0 +1,12 @@
+{
+  "name" : "polished3",
+  "type" : "material",
+  "dithering_pattern" : "random",
+  "lighter" : "polished2",
+  "blocks" : {
+    "block" : "polished_blackstone",
+    "stairs" : "polished_blackstone_stairs",
+    "slab" : "polished_blackstone_slab",
+    "wall" : "polished_blackstone_wall"
+  }
+}

@@ -1,4 +1,4 @@
-from .block import Block
+from gdpc.block import Block
 from gdpc.vector_tools import ivec3
 
 

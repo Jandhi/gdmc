@@ -95,7 +95,7 @@ class Asset(metaclass=AssetMeta):
     # This function ensures all required fields are there
     def validate(self) -> AssetValidationState:
         state = AssetValidationState()
-        annotations: dict[str, str] = type(self).get_annotations()
+        annotations: dict[str, Any] = type(self).get_annotations()
 
         for field_name, field_type in annotations.items():
             if not hasattr(self, field_name):
@@ -122,6 +122,9 @@ class Asset(metaclass=AssetMeta):
                     setattr(self, field_name, value)
 
     def on_construct(self) -> None:  # Called after fields are validated
+        pass
+
+    def on_link(self) -> None:  # Called after fields are linked
         pass
 
     # Adds object to global pool of objects
@@ -193,7 +196,7 @@ class Asset(metaclass=AssetMeta):
         return asset
 
     @classmethod
-    def get_annotations(cls) -> dict[str, str]:
+    def get_annotations(cls) -> dict[str, Any]:
         annotations = {}
 
         for tp in inspect.getmro(cls)[:-1]:

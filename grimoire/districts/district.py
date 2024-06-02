@@ -1,5 +1,6 @@
 from gdpc.vector_tools import ivec2, ivec3
-from ..palette import Palette
+
+from grimoire.core.styling.palette import Palette
 
 
 class District:

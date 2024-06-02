@@ -1,0 +1,8 @@
+{
+    "name" : "wall_palette",
+    "type" : "legacy_palette",
+    "primary_wood" : "oak",
+    "secondary_wood" : "spruce",
+    "primary_stone" : "stone_brick",
+    "primary_stone_accent" : "cobblestone"
+}

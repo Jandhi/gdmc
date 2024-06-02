@@ -1,0 +1,13 @@
+{
+  "name" : "polished2",
+  "type" : "material",
+  "dithering_pattern" : "random",
+  "lighter": "polished1",
+  "darker" : "polished3",
+  "blocks" : {
+    "block" : "polished_deepslate",
+    "stairs" : "polished_deepslate_stairs",
+    "slab" : "polished_deepslate_slab",
+    "wall" : "polished_deepslate_wall"
+  }
+}

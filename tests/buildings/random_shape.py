@@ -1,5 +1,5 @@
 from gdpc.vector_tools import ivec2, ivec3
-from core.noise.rng import RNG
+from grimoire.core.noise.rng import RNG
 
 
 def random_shape(SEED: int):

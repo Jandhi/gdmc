@@ -4,7 +4,8 @@ BITNOISE3 = 0x1859C4E9
 
 
 # hashes together a seed and a position
-def hash(seed: int, pos: int) -> int:
+# uses squirrel3 algorithm
+def sq_hash(seed: int, pos: int) -> int:
     noise = pos
     noise *= BITNOISE1
     noise = noise + seed
@@ -22,7 +23,7 @@ def hash(seed: int, pos: int) -> int:
 # hashes together a seed with any amount of arguments
 def recursive_hash(seed: int, *args: int):
     for arg in args:
-        seed = hash(seed, arg)
+        seed = sq_hash(seed, arg)
 
     return seed
 

@@ -5,7 +5,7 @@ sys.path[0] = sys.path[0].removesuffix("tests\\buildings")
 
 # Actual file
 from grimoire.buildings.building_shape import BuildingShape
-from grimoire.core.assets.load_assets import load_assets
+from grimoire.core.assets.asset_loader import load_assets
 from gdpc import Editor, Block
 from gdpc.vector_tools import ivec3
 from grimoire.core.structures.grid import Grid

@@ -21,12 +21,21 @@ def load_types():
     _ = Room
 
     # PALETTES
-    from ...palette import Palette
+    from grimoire.core.styling.legacy_palette import LegacyPalette
 
-    _ = Palette
+    _ = LegacyPalette
 
     # BUILDING SHAPE
     from ...buildings.building_shape import BuildingShape
+
+    # Material
+    from grimoire.core.styling.materials.material import (
+        Material,
+        BasicMaterial,
+        CompositeMaterial,
+    )
+
+    _ = (Material, BasicMaterial, CompositeMaterial)
 
     _ = BuildingShape
 
@@ -44,3 +53,8 @@ def load_types():
     from ...core.structures.asset_structure import AssetStructure
 
     _ = AssetStructure
+
+    # GATE
+    from grimoire.districts.gate import Gate
+
+    _ = Gate

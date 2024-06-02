@@ -2,7 +2,7 @@ import sys
 
 from nbtlib import nbt, serialize_tag
 from ..structure import Structure
-from ..block import Block
+from gdpc.block import Block
 from gdpc.vector_tools import ivec3
 
 
@@ -23,7 +23,7 @@ def convert_nbt(filename: str) -> Structure:
         if "Properties" in tag:
             properties = __read_properties(tag)
 
-        palette.append(Block(name, properties))
+        palette.append(Block(id=name, states=properties))
     return Structure(blocks, entities, palette, dimensions)
 
 

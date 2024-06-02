@@ -5,7 +5,7 @@ sys.path[0] = sys.path[0].removesuffix("tests\\assets")
 
 # Actual file
 from grimoire.core.structures.nbt.nbt_asset import NBTAsset
-from grimoire.core.assets.load_assets import load_assets
+from grimoire.core.assets.asset_loader import load_assets
 
 
 class Test(NBTAsset):
@@ -16,7 +16,7 @@ class SubTest(Test):
     pass
 
 
-load_assets("core\\assets\\story")
+load_assets("tests\\assets")
 
 # you should see one error and two warnings about fields not being annotated
 assert len(Test.all()) == 2

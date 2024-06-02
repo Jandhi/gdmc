@@ -4,7 +4,7 @@ sys.path[0] = sys.path[0].removesuffix("\\tests\\industries")
 
 from gdpc import Editor
 from gdpc.vector_tools import ivec3
-from grimoire.core.assets.load_assets import load_assets
+from grimoire.core.assets.asset_loader import load_assets
 from grimoire.districts.district import District
 from grimoire.industries import industry
 

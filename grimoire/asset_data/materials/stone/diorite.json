@@ -1,0 +1,6 @@
+{
+  "name" : "diorite",
+  "type" : "material",
+  "dithering_pattern" : "random",
+  "darker" : "andesite"
+}

@@ -1,6 +1,6 @@
 from gdpc.editor import Editor
 from gdpc.vector_tools import ivec3
-from ..core.structures.legacy_directions import north, east, west, south
+from ...core.structures.legacy_directions import north, east, west, south
 
 
 # uses set block to place blocks with nbts (playerheads)

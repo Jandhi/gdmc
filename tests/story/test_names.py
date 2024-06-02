@@ -8,7 +8,7 @@ from grimoire.story.names.name_generator import NamingSchema, NameGenerator
 
 sys.path[0] = sys.path[0].removesuffix("story\\names\\story")
 
-from grimoire.core.assets.load_assets import load_assets
+from grimoire.core.assets.asset_loader import load_assets
 from grimoire.story.load_story_types import load_types
 
 

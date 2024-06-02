@@ -1,0 +1,9 @@
+{
+    "name" : "viking_palette",
+    "type" : "legacy_palette",
+    "primary_wood" : "dark_oak",
+    "secondary_wood" : "oak",
+    "primary_stone" : "cobblestone",
+    "primary_stone_accent" : "stone_brick",
+    "tags" : ["viking"]
+}

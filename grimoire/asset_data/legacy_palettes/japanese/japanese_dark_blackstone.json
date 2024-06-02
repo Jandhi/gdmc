@@ -1,0 +1,9 @@
+{
+    "name" : "japanese_dark_blackstone",
+    "tags" : ["japanese"], 
+    "type" : "legacy_palette",
+    "primary_wood" : "dark_oak",
+    "secondary_wood" : "spruce",
+    "primary_stone" : "polished_blackstone_brick",
+    "primary_stone_accent" : "polished_blackstone"
+}
